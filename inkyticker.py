@@ -38,9 +38,9 @@ class Inkyticker:
         output = r.json()
 
         # write the vars with results from API call
-        self.price = output['data'][coin_id]['quote'][currency]['price']
-        self.day = output['data'][coin_id]['quote'][currency]['percent_change_24h']
-        self.week = output['data'][coin_id]['quote'][currency]['percent_change_7d']
+        self.price = output['data'][self.coin_id]['quote'][self.currency]['price']
+        self.day = output['data'][self.coin_id]['quote'][self.currency]['percent_change_24h']
+        self.week = output['data'][self.coin_id]['quote'][self.currency]['percent_change_7d']
 
         self.roi = self.price * self.coin_amount
 

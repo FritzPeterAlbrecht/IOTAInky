@@ -5,7 +5,7 @@ from time import sleep
 if __name__ == "__main__":
 
     # setup
-    config = Configuration("/home/pi/PythonScripts/crypticV4/CrypticV4.0/config.json")
+    config = Configuration("/home/pi/PythonScripts/IOTAInky/config.json")
     ticker = Inkyticker(config)
 
     # run the programm

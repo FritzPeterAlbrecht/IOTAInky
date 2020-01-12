@@ -22,4 +22,18 @@ Also we need the requests package:
 $ sudo pip3 install requests
 ```
 
-| setting | whats happening |
+#### Configuration file for the settings
+
+| Setting | Function |
+| ------- | -------- |
+| APIKey | In order to make IOTAInky work, you need an account at https://coinmarketcap.com/api/ |
+| CoinID | coin ID from CMC you want to track |
+| Currency | currency conversion for example "USD", "GBP" or "BTC". There are many possible conversions |
+| CoinInvest | To calculate the "return of investment" you need to set the amount of paid fiat |
+| CoinAmount | The amount of your holdings (Tokens) to calculate ROI |
+| ShowROI | Display the ROI field on th Inky |
+| BackgroundImage | Path to the background image |
+| FontPath | Path to the font |
+| InkyColor | Generell color of your Inkyphat - set to "yellow" for a yellow Inky for example |
+| InkyBorderColor | The border can be set to black or red, change it here |
+| InkyRotate | Rotation of your Inkyphat |

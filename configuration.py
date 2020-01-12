@@ -19,7 +19,7 @@ class Configuration:
             # Currency for conversion
             self.currency = c["Currency"]
             # Investment in Fiat
-            self.invest = c["CoinInvest"]
+            self.coin_invest = c["CoinInvest"]
             # Amount of tokens
             self.coin_amount = c["CoinAmount"]
             # Show ROI Label

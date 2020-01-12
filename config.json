@@ -1,0 +1,13 @@
+{
+    "APIKey": "YOUR_COINMARKETCAP_API_KEY",
+    "CoinID": "1720",
+    "Currency": "EUR",
+    "CoinInvest": 1000,
+    "CoinAmount": 5000,
+    "ShowROI": "True",
+    "BackgroundImage": "/home/pi/PythonScripts/IOTAInky/IotaInkyWhiteSBR.png",
+    "FontPath": "/home/pi/PythonScripts/IOTAInky/Orbitron-Regular.ttf",
+    "InkyColor": "red",
+    "InkyBorderColor": "inkyphat.BLACK",
+    "InkyRotate": "180"
+}

@@ -33,7 +33,7 @@ class Inkyticker:
     def data(self):
 
         r = requests.get(
-            'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?id=' + self.coin_id + '&convert=' + self.currency, header={'X-CMC_PRO_API_KEY': '5451b6a0-06f7-4a7a-85b0-8bb65e28be74', 'Accept': 'application/json'})
+            'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?id=' + self.coin_id + '&convert=' + self.currency, headers={'X-CMC_PRO_API_KEY': '5451b6a0-06f7-4a7a-85b0-8bb65e28be74', 'Accept': 'application/json'})
 
         output = r.json()
 
@@ -62,10 +62,14 @@ class Inkyticker:
             inkyphat.text((7, 42), day, inkyphat.RED, font)
 
         # Add the ROI text
-        font = ImageFont.truetype(self.font, 34)
-        roi = self.price * self.config.coin_amount
-        roistr = str(roi)
+        if self.config.show_roi == True:
+            font = ImageFont.truetype(self.font, 34)
+            roi = self.price * self.config.coin_amount
+            roistr = str(roi)
 
-        inkyphat.text((4, 75), roistr[0:7], inkyphat.WHITE, font)
+            inkyphat.text((4, 75), roistr[0:7], inkyphat.WHITE, font)
+
+        else:
+            pass
 
         inkyphat.show()

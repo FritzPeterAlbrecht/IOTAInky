@@ -21,19 +21,19 @@ class Inkyticker:
         inkyphat.set_image(self.config.background)
 
         # startup vars
-        api_key = self.config.api_key
-        coin_id = self.config.coin_id
-        currency = self.config.currency
-        coin_invest = self.config.coin_invest
+        self.api_key = self.config.api_key
+        self.coin_id = self.config.coin_id
+        self.currency = self.config.currency
+        self.coin_invest = self.config.coin_invest
         self.coin_amount = self.config.coin_amount
-        show_roi = self.config.show_roi
+        self.show_roi = self.config.show_roi
         self.font = self.config.font_path
 
     # API call coinmarketcap.com and get the data needed for displaying
     def data(self):
 
         r = requests.get(
-            'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?id=' + coin_id + '&convert=' + currency, header={'X-CMC_PRO_API_KEY': '5451b6a0-06f7-4a7a-85b0-8bb65e28be74', 'Accept': 'application/json'})
+            'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?id=' + self.coin_id + '&convert=' + self.currency, header={'X-CMC_PRO_API_KEY': '5451b6a0-06f7-4a7a-85b0-8bb65e28be74', 'Accept': 'application/json'})
 
         output = r.json()
 

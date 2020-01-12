@@ -9,7 +9,6 @@ if __name__ == "__main__":
     ticker = Inkyticker(config)
 
     # run the programm
-    #sleep(10)
+    sleep(10)
     ticker.data()
-    #sleep(2)
     ticker.controller()

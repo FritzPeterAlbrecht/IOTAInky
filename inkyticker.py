@@ -56,10 +56,10 @@ class Inkyticker:
         # Add the day change text
         font = ImageFont.truetype(self.font, 22)
         day = "%.2f" % self.day
-        changed = float(day)
-        if changed >= 0.0:
+        #changed = float(day)
+        if day >= 0.0:
             inkyphat.text((7, 42), day, inkyphat.BLACK, font)
-        if changed <= 0.0:
+        if day <= 0.0:
             inkyphat.text((7, 42), day, inkyphat.RED, font)
 
         # Add the ROI text

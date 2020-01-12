@@ -10,7 +10,7 @@ class Configuration:
         with open(filename, 'r') as f:
             c = json.load(f)
 
-            print("loaded configuration: ", c)
+            #print("loaded configuration: ", c)
 
             # API Key for your Coin Market Cap Account
             self.api_key = c["APIKey"]

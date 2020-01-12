@@ -65,9 +65,10 @@ class Inkyticker:
         # Add the ROI text
         if self.config.show_roi == True:
             font = ImageFont.truetype(self.font, 34)
-            roi = self.price * self.config.coin_amount
-            roistr = str(roi)
-            inkyphat.text((4, 75), roistr[0:7], inkyphat.WHITE, font)
+            roi = "%.2f" % self.price * self.config.coin_amount
+            print(roi)
+            #roistr = str(roi)
+            inkyphat.text((4, 75), roi, inkyphat.WHITE, font)
 
         else:
             pass

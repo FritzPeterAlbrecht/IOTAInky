@@ -14,12 +14,6 @@ class Inkyticker:
 
         self.config = config
 
-        # basic settings of the inkyphat
-        inkyphat.set_colour(self.config.inky_color)
-        inkyphat.set_border(self.config.inky_border_color)
-        inkyphat.set_rotation(self.config.inky_rotate)
-        inkyphat.set_image(self.config.background)
-
         # startup vars
         self.api_key = self.config.api_key
         self.coin_id = self.config.coin_id
@@ -46,6 +40,12 @@ class Inkyticker:
 
     # Set the different parts for the Inkyphat
     def controller(self):
+
+        # basic settings of the inkyphat
+        inkyphat.set_colour(self.config.inky_color)
+        inkyphat.set_border(self.config.inky_border_color)
+        inkyphat.set_rotation(self.config.inky_rotate)
+        inkyphat.set_image(self.config.background)
 
         # Add the price text
         font = ImageFont.truetype(self.font, 36)

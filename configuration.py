@@ -2,7 +2,7 @@ import json
 
 class Configuration:
 
-    def __init__(self, filename = "./config.json"):
+    def __init__(self, filename = "/home/pi/PythonScripts/config.json"):
         self.load(filename)
 
     def load(self, filename):

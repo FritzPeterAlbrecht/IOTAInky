@@ -67,10 +67,9 @@ class Inkyticker:
             font = ImageFont.truetype(self.font, 34)
             roi = self.price * self.config.coin_amount
             roistr = str(roi)
-            print("show roi")
             inkyphat.text((4, 75), roistr[0:7], inkyphat.WHITE, font)
 
         else:
-            print("no roi")
+            pass
 
         inkyphat.show()

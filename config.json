@@ -4,7 +4,7 @@
     "Currency": "EUR",
     "CoinInvest": 1000,
     "CoinAmount": 5000,
-    "ShowROI": "True",
+    "ShowROI": true,
     "BackgroundImage": "/home/pi/PythonScripts/IOTAInky/IotaInkyWhiteSBR.png",
     "FontPath": "/home/pi/PythonScripts/IOTAInky/Orbitron-Regular.ttf",
     "InkyColor": "red",

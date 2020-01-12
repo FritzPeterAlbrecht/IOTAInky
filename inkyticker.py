@@ -45,12 +45,12 @@ class Inkyticker:
         inkyphat.set_colour(self.config.inky_color)
         inkyphat.set_border(self.config.inky_border_color)
         inkyphat.set_rotation(self.config.inky_rotate)
-        inkyphat.set_image(self.config.background)
+        img = Image.open(self.config.background)
+        inkyphat.set_image(img)
 
         # Add the price text
         font = ImageFont.truetype(self.font, 36)
         price = str("%.3f" % self.price)
-        print(price)
         inkyphat.text((4, 5), price, inkyphat.RED, font)
 
         # Add the day change text

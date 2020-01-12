@@ -9,5 +9,5 @@
     "FontPath": "/home/pi/PythonScripts/IOTAInky/Orbitron-Regular.ttf",
     "InkyColor": "red",
     "InkyBorderColor": "inkyphat.BLACK",
-    "InkyRotate": "180"
+    "InkyRotate": 180
 }

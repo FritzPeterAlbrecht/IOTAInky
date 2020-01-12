@@ -21,3 +21,5 @@ Also we need the requests package:
 ```sh
 $ sudo pip3 install requests
 ```
+
+| setting | whats happening |

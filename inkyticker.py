@@ -27,7 +27,7 @@ class Inkyticker:
     def data(self):
 
         r = requests.get(
-            'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?id=' + self.coin_id + '&convert=' + self.currency, headers={'X-CMC_PRO_API_KEY': '5451b6a0-06f7-4a7a-85b0-8bb65e28be74', 'Accept': 'application/json'})
+            'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?id=' + self.coin_id + '&convert=' + self.currency, headers={'X-CMC_PRO_API_KEY': self.api_key, 'Accept': 'application/json'})
 
         output = r.json()
 
@@ -104,16 +104,16 @@ class Inkyticker:
         font = ImageFont.truetype(self.font, 22)
         day = "%.2f" % self.day
         if day > 0.0:
-            inkyphat.text((56, 62), str("24h: " + str(day) + "%"), inkyphat.WHITE, font)
+            inkyphat.text((56, 62), "24h: " + str(day) + "%", inkyphat.WHITE, font)
         if day < 0.0:
-            inkyphat.text((56, 62), str("24h: " + str(day) + "%"), inkyphat.RED, font)
+            inkyphat.text((56, 62), "24h: " + str(day) + "%", inkyphat.RED, font)
 
         # Add the week change text
         font = ImageFont.truetype(self.font, 22)
         week = "%.2f" % self.week
         if week > 0.0:
-            inkyphat.text((57, 82), str("7d: " + str(week) + "%"), inkyphat.WHITE, font)
+            inkyphat.text((57, 82), "7d: " + str(week) + "%", inkyphat.WHITE, font)
         if week < 0.0:
-            inkyphat.text((57, 82), str("7d: " + str(week) + "%"), inkyphat.RED, font)
+            inkyphat.text((57, 82), "7d: " + str(week) + "%", inkyphat.RED, font)
 
         inkyphat.show()

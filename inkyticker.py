@@ -97,7 +97,7 @@ class Inkyticker:
         # Add the price text
         font = ImageFont.truetype(self.font, 36)
         price = str("%.3f" % self.price)
-        inkyphat.text((85, 45), price, inkyphat.WHITE, font)
+        inkyphat.text((85, 25), price, inkyphat.WHITE, font)
 
         # Add the day change text
         font = ImageFont.truetype(self.font, 22)

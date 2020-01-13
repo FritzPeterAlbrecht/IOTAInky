@@ -15,5 +15,7 @@ if __name__ == "__main__":
     ticker.data()
     if config.simple_mode == True:
         ticker.simple()
+    elif config.simple_personal == True:
+        ticker.simple_personal()
     else:
         ticker.normal()

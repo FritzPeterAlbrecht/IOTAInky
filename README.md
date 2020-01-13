@@ -33,6 +33,7 @@ $ sudo pip3 install requests
 | CoinInvest | To calculate the "return of investment" you need to set the amount of paid fiat |
 | CoinAmount | The amount of your holdings (Tokens) to calculate ROI |
 | SimpleMode | If set to true, IOTAInky is showing a slick black interface with no personal features like ROI |
+| SimplePersonal | If set to true, IOTAInky show the slick black interface just with rank, price and ROI percentage |
 | ShowFiatROI | "true" will show your ROI in Fiat, "false" shows it as percentage |
 | BackgroundImage | Path to the background image |
 | BackgroundSimple | Path to the background image for the simple mode |

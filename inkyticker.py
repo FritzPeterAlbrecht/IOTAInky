@@ -14,6 +14,11 @@ class Inkyticker:
 
         self.config = config
 
+        # Basic Inky settings
+        inkyphat.set_colour(self.config.inky_color)
+        inkyphat.set_border(self.config.inky_border_color)
+        inkyphat.set_rotation(self.config.inky_rotate)
+
         # startup vars
         self.api_key = self.config.api_key
         self.coin_id = self.config.coin_id
@@ -42,10 +47,7 @@ class Inkyticker:
     # Function for the normal mode
     def normal(self):
 
-        # basic settings of the inkyphat
-        inkyphat.set_colour(self.config.inky_color)
-        inkyphat.set_border(self.config.inky_border_color)
-        inkyphat.set_rotation(self.config.inky_rotate)
+        # background image
         img = Image.open(self.config.background)
         inkyphat.set_image(img)
 
@@ -84,10 +86,7 @@ class Inkyticker:
     # Function for the simple mode
     def simple(self):
 
-        # Basic settings of the inkyphat
-        inkyphat.set_colour(self.config.inky_color)
-        inkyphat.set_border(self.config.inky_border_color)
-        inkyphat.set_rotation(self.config.inky_rotate)
+        # background image
         img = Image.open(self.config.back_simple)
         inkyphat.set_image(img)
 
@@ -117,3 +116,25 @@ class Inkyticker:
             inkyphat.text((57, 82), "7d: " + str(week) + "%", inkyphat.RED, font)
 
         inkyphat.show()
+
+    def simple_personal(self):
+
+        # background image
+        img = Image.open(self.config.back_simple)
+        inkyphat.set_image(img)
+
+        # Add ranking text
+        font = ImageFont.truetype(self.font, 22)
+        inkyphat.text((55, 5), "#" + self.rank, inkyphat.WHITE, font)
+
+        # Add the price text
+        font = ImageFont.truetype(self.font, 46)
+        price = str("%.3f" % self.price)
+        inkyphat.text((54, 25), price, inkyphat.WHITE, font)
+
+        # Add ROI Percentage
+        actual_value = self.price * self.coin_amount
+        percentage = (actual_value / self.coin_invest * 100) - 100
+        font = ImageFont.truetype(self.font, 32)
+        roistr = str("%.2f" % percentage + '%')
+        inkyphat.text((54, 75), roistr, inkyphat.RED, font)

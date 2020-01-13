@@ -24,6 +24,8 @@ class Configuration:
             self.coin_amount = c["CoinAmount"]
             # Simple Mode on/off
             self.simple_mode = c["SimpleMode"]
+            # Simple Personal Mode on/off
+            self.simple_personal = c["SimplePersonal"]
             # Show ROI Label
             self.show_roi = c["ShowFiatROI"]
             # Background Image

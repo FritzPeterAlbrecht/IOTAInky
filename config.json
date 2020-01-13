@@ -5,6 +5,7 @@
     "CoinInvest": 1000,
     "CoinAmount": 5000,
     "SimpleMode": false,
+    "SimplePersonal": true,
     "ShowFiatROI": false,
     "BackgroundImage": "/home/pi/PythonScripts/IOTAInky/IotaInkyWhiteSBR.png",
     "BackgroundSimple": "/home/pi/PythonScripts/IOTAInky/IotaWhite.png",

@@ -90,16 +90,16 @@ class Inkyticker:
         inkyphat.set_image(img)
 
         # Add the price text
-        font = ImageFont.truetype(self.font, 26)
+        font = ImageFont.truetype(self.font, 36)
         price = str("%.3f" % self.price)
-        inkyphat.text((4, 5), price, inkyphat.WHITE, font)
+        inkyphat.text((30, 5), price, inkyphat.WHITE, font)
 
         # Add the day change text
         font = ImageFont.truetype(self.font, 22)
         day = "%.2f" % self.day
         if day >= 0.0:
-            inkyphat.text((7, 42), "24h:" + str(day), inkyphat.WHITE, font)
+            inkyphat.text((30, 42), "24h:" + str(day) + "%", inkyphat.WHITE, font)
         if day <= 0.0:
-            inkyphat.text((7, 42), "24h:" + str(day), inkyphat.RED, font)
+            inkyphat.text((30, 42), "24h:" + str(day) + "%", inkyphat.WHITE, font)
 
         inkyphat.show()

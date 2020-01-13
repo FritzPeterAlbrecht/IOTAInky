@@ -101,19 +101,19 @@ class Inkyticker:
         inkyphat.text((65, 25), price, inkyphat.WHITE, font)
 
         # Add the day change text
-        font = ImageFont.truetype(self.font, 18)
+        font = ImageFont.truetype(self.font, 22)
         day = "%.2f" % self.day
         if day >= 0.0:
-            inkyphat.text((66, 62), "24h: " + str(day) + "%", inkyphat.WHITE, font)
+            inkyphat.text((66, 62), str("24h: " + str(day) + "%"), inkyphat.WHITE, font)
         if day <= 0.0:
-            inkyphat.text((66, 62), "24h: " + str(day) + "%", inkyphat.RED, font)
+            inkyphat.text((66, 62), str("24h: " + str(day) + "%"), inkyphat.RED, font)
 
         # Add the week change text
-        font = ImageFont.truetype(self.font, 18)
+        font = ImageFont.truetype(self.font, 22)
         week = "%.2f" % self.week
         if week >= 0.0:
-            inkyphat.text((66, 84), "7d: " + str(week) + "%", inkyphat.WHITE, font)
+            inkyphat.text((66, 84), str("7d: " + str(week) + "%"), inkyphat.WHITE, font)
         if week <= 0.0:
-            inkyphat.text((66, 84), "7d: " + str(week) + "%", inkyphat.RED, font)
+            inkyphat.text((66, 84), str("7d: " + str(week) + "%"), inkyphat.RED, font)
 
         inkyphat.show()

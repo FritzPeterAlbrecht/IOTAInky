@@ -40,3 +40,7 @@ $ sudo pip3 install requests
 | InkyColor | General color of your Inkyphat - set to "yellow" for a yellow Inkyphat for example |
 | InkyBorderColor | The border can be set to black or red, change it here |
 | InkyRotate | Rotation of your Inkyphat |
+
+#### How to get everything started
+
+Take your Raspberry Zero, plug in the Inkyphat e-Ink Display and clone this repository. You may adjust your paths in the config and program files.

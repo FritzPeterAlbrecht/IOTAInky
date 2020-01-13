@@ -92,27 +92,27 @@ class Inkyticker:
 
         # Add ranking text
         font = ImageFont.truetype(self.font, 22)
-        inkyphat.text((85, 5), "#" + self.rank, inkyphat.WHITE, font)
+        inkyphat.text((65, 5), "#" + self.rank, inkyphat.WHITE, font)
 
         # Add the price text
-        font = ImageFont.truetype(self.font, 36)
+        font = ImageFont.truetype(self.font, 38)
         price = str("%.3f" % self.price)
-        inkyphat.text((85, 25), price, inkyphat.WHITE, font)
+        inkyphat.text((65, 25), price, inkyphat.WHITE, font)
 
         # Add the day change text
         font = ImageFont.truetype(self.font, 22)
         day = "%.2f" % self.day
         if day >= 0.0:
-            inkyphat.text((85, 62), "24h:" + str(day) + "%", inkyphat.WHITE, font)
+            inkyphat.text((65, 62), "24h: " + str(day) + "%", inkyphat.WHITE, font)
         if day <= 0.0:
-            inkyphat.text((85, 62), "24h:" + str(day) + "%", inkyphat.RED, font)
+            inkyphat.text((65, 62), "24h: " + str(day) + "%", inkyphat.RED, font)
 
         # Add the week change text
         font = ImageFont.truetype(self.font, 22)
         week = "%.2f" % self.week
         if week >= 0.0:
-            inkyphat.text((85, 84), "7D:" + str(week) + "%", inkyphat.WHITE, font)
+            inkyphat.text((65, 84), "7d: " + str(week) + "%", inkyphat.WHITE, font)
         if week <= 0.0:
-            inkyphat.text((85, 84), "7d:" + str(week) + "%", inkyphat.RED, font)
+            inkyphat.text((65, 84), "7d: " + str(week) + "%", inkyphat.RED, font)
 
         inkyphat.show()

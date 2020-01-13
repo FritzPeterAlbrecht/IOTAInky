@@ -22,12 +22,14 @@ class Configuration:
             self.coin_invest = c["CoinInvest"]
             # Amount of tokens
             self.coin_amount = c["CoinAmount"]
+            # Simple Mode on/off
+            self.simple_mode = c["SimpleMode"]
             # Show ROI Label
             self.show_roi = c["ShowFiatROI"]
             # Background Image
             self.background = c["BackgroundImage"]
             # Background Portrait Mode
-            self.simple = c["BackgroundSimple"]
+            self.back_simple = c["BackgroundSimple"]
             # Font Path
             self.font_path = c["FontPath"]
             # Set the color of your Inkyphat

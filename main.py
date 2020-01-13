@@ -13,7 +13,7 @@ if __name__ == "__main__":
     # run the programm
     sleep(10)
     ticker.data()
-    if config.simple == True:
+    if config.simple_mode == True:
         ticker.simple()
     else:
         ticker.normal()

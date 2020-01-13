@@ -39,7 +39,7 @@ class Inkyticker:
 
         self.roi = self.price * self.coin_amount
 
-    # Set the different parts for the Inkyphat
+    # Function for the normal mode
     def normal(self):
 
         # basic settings of the inkyphat
@@ -58,9 +58,9 @@ class Inkyticker:
         font = ImageFont.truetype(self.font, 22)
         day = "%.2f" % self.day
         if day >= 0.0:
-            inkyphat.text((7, 42), day, inkyphat.BLACK, font)
+            inkyphat.text((7, 42), str(day), inkyphat.BLACK, font)
         if day <= 0.0:
-            inkyphat.text((7, 42), day, inkyphat.RED, font)
+            inkyphat.text((7, 42), str(day), inkyphat.RED, font)
 
         # Add the ROI as FIAT
         if self.config.show_roi == True:
@@ -81,13 +81,14 @@ class Inkyticker:
 
         inkyphat.show()
 
+    # Function for the simple mode
     def simple(self):
 
         # basic settings of the inkyphat
         inkyphat.set_colour(self.config.inky_color)
         inkyphat.set_border(self.config.inky_border_color)
         inkyphat.set_rotation(self.config.inky_rotate)
-        img = Image.open(self.config.portrait)
+        img = Image.open(self.config.back_simple)
         inkyphat.set_image(img)
 
         # Add ranking text

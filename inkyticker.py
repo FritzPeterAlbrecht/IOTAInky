@@ -85,7 +85,7 @@ class Inkyticker:
         # basic settings of the inkyphat
         inkyphat.set_colour(self.config.inky_color)
         inkyphat.set_border(self.config.inky_border_color)
-        inkyphat.set_rotation(-90)
+        inkyphat.set_rotation(90)
         img = Image.open(self.config.portrait)
         inkyphat.set_image(img)
 

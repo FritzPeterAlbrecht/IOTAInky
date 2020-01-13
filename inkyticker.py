@@ -93,3 +93,5 @@ class Inkyticker:
         font = ImageFont.truetype(self.font, 26)
         price = str("%.3f" % self.price)
         inkyphat.text((4, 5), price, inkyphat.WHITE, font)
+
+        inkyphat.show()

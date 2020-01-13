@@ -138,3 +138,5 @@ class Inkyticker:
         font = ImageFont.truetype(self.font, 32)
         roistr = str("%.2f" % percentage + '%')
         inkyphat.text((54, 75), roistr, inkyphat.RED, font)
+
+        inkyphat.show()

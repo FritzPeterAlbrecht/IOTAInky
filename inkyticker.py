@@ -39,7 +39,7 @@ class Inkyticker:
         self.roi = self.price * self.coin_amount
 
     # Set the different parts for the Inkyphat
-    def controller(self):
+    def landscape(self):
 
         # basic settings of the inkyphat
         inkyphat.set_colour(self.config.inky_color)
@@ -56,7 +56,6 @@ class Inkyticker:
         # Add the day change text
         font = ImageFont.truetype(self.font, 22)
         day = "%.2f" % self.day
-        #changed = float(day)
         if day >= 0.0:
             inkyphat.text((7, 42), day, inkyphat.BLACK, font)
         if day <= 0.0:
@@ -64,6 +63,7 @@ class Inkyticker:
 
         # Add the ROI as FIAT
         if self.config.show_roi == True:
+
             font = ImageFont.truetype(self.font, 34)
             roi = self.price * self.coin_amount
             roistr = str("%.2f" % roi)
@@ -79,3 +79,17 @@ class Inkyticker:
             inkyphat.text((4, 75), roistr, inkyphat.WHITE, font)
 
         inkyphat.show()
+
+    def portrait(self):
+
+        # basic settings of the inkyphat
+        inkyphat.set_colour(self.config.inky_color)
+        inkyphat.set_border(self.config.inky_border_color)
+        inkyphat.set_rotation(90)
+        img = Image.open(self.config.portrait)
+        inkyphat.set_image(img)
+
+        # Add the price text
+        font = ImageFont.truetype(self.font, 26)
+        price = str("%.3f" % self.price)
+        inkyphat.text((4, 5), price, inkyphat.WHITE, font)

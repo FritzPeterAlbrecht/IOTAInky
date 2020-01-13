@@ -75,7 +75,7 @@ class Inkyticker:
             actual_value = self.price * self.coin_amount
             percentage = (actual_value / self.coin_invest * 100) - 100
             font = ImageFont.truetype(self.font, 34)
-            roistr = str("%.2f" % percentage)
+            roistr = str("%.2f" % percentage + '%')
             inkyphat.text((4, 75), roistr, inkyphat.WHITE, font)
 
         inkyphat.show()

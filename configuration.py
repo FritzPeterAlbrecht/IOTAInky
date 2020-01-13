@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import json
 
 class Configuration:
@@ -9,8 +11,6 @@ class Configuration:
 
         with open(filename, 'r') as f:
             c = json.load(f)
-
-            #print("loaded configuration: ", c)
 
             # API Key for your Coin Market Cap Account
             self.api_key = c["APIKey"]
@@ -26,6 +26,8 @@ class Configuration:
             self.show_roi = c["ShowFiatROI"]
             # Background Image
             self.background = c["BackgroundImage"]
+            # Background Portrait Mode
+            self.portrait = c["BackgroundPortrait"]
             # Font Path
             self.font_path = c["FontPath"]
             # Set the color of your Inkyphat

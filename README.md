@@ -32,9 +32,9 @@ $ sudo pip3 install requests
 | Currency | Currency conversion for example "USD", "GBP" or "BTC". There are many possible conversions |
 | CoinInvest | To calculate the "return of investment" you need to set the amount of paid fiat |
 | CoinAmount | The amount of your holdings (Tokens) to calculate ROI |
-| ShowROI | Display the "return of investment" field on the Inky |
+| ShowFiatROI | "true" will show your ROI in Fiat, "false" shows it as percentage |
 | BackgroundImage | Path to the background image |
-| FontPath | Path to the used font |
-| InkyColor | Generell color of your Inkyphat - set to "yellow" for a yellow Inkyphat for example |
+| FontPath | Path to the used font - using a different font may destroy the positioning |
+| InkyColor | General color of your Inkyphat - set to "yellow" for a yellow Inkyphat for example |
 | InkyBorderColor | The border can be set to black or red, change it here |
 | InkyRotate | Rotation of your Inkyphat |

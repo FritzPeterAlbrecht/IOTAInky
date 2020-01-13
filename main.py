@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from configuration import Configuration
 from inkyticker import Inkyticker
 from time import sleep

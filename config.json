@@ -6,6 +6,7 @@
     "CoinAmount": 5000,
     "ShowFiatROI": false,
     "BackgroundImage": "/home/pi/PythonScripts/IOTAInky/IotaInkyWhiteSBR.png",
+    "BackgroundPortrait": "/home/pi/PythonScripts/IOTAInky/IotaBack.png",
     "FontPath": "/home/pi/PythonScripts/IOTAInky/Orbitron-Regular.ttf",
     "InkyColor": "red",
     "InkyBorderColor": "inkyphat.BLACK",

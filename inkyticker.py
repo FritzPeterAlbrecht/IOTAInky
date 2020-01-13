@@ -45,7 +45,7 @@ class Inkyticker:
         inkyphat.set_colour(self.config.inky_color)
         inkyphat.set_border(self.config.inky_border_color)
         inkyphat.set_rotation(self.config.inky_rotate)
-        img = Image.open(self.config.background)
+        img = Image.open(self.config.portrait)
         inkyphat.set_image(img)
 
         # Add the price text

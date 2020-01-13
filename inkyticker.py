@@ -40,7 +40,7 @@ class Inkyticker:
         self.roi = self.price * self.coin_amount
 
     # Set the different parts for the Inkyphat
-    def landscape(self):
+    def normal(self):
 
         # basic settings of the inkyphat
         inkyphat.set_colour(self.config.inky_color)
@@ -81,7 +81,7 @@ class Inkyticker:
 
         inkyphat.show()
 
-    def portrait(self):
+    def simple(self):
 
         # basic settings of the inkyphat
         inkyphat.set_colour(self.config.inky_color)
@@ -95,12 +95,12 @@ class Inkyticker:
         inkyphat.text((65, 5), "#" + self.rank, inkyphat.WHITE, font)
 
         # Add the price text
-        font = ImageFont.truetype(self.font, 42)
+        font = ImageFont.truetype(self.font, 46)
         price = str("%.3f" % self.price)
         inkyphat.text((65, 25), price, inkyphat.WHITE, font)
 
         # Add the day change text
-        font = ImageFont.truetype(self.font, 22)
+        font = ImageFont.truetype(self.font, 18)
         day = "%.2f" % self.day
         if day >= 0.0:
             inkyphat.text((66, 62), "24h: " + str(day) + "%", inkyphat.WHITE, font)
@@ -108,7 +108,7 @@ class Inkyticker:
             inkyphat.text((66, 62), "24h: " + str(day) + "%", inkyphat.RED, font)
 
         # Add the week change text
-        font = ImageFont.truetype(self.font, 22)
+        font = ImageFont.truetype(self.font, 18)
         week = "%.2f" % self.week
         if week >= 0.0:
             inkyphat.text((66, 84), "7d: " + str(week) + "%", inkyphat.WHITE, font)

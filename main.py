@@ -13,7 +13,7 @@ if __name__ == "__main__":
     # run the programm
     sleep(10)
     ticker.data()
-    if config.portrait == False:
-        ticker.landscape()
+    if config.simple == True:
+        ticker.simple()
     else:
-        ticker.portrait()
+        ticker.normal()

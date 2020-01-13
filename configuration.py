@@ -27,7 +27,7 @@ class Configuration:
             # Background Image
             self.background = c["BackgroundImage"]
             # Background Portrait Mode
-            self.portrait = c["BackgroundPortrait"]
+            self.simple = c["BackgroundSimple"]
             # Font Path
             self.font_path = c["FontPath"]
             # Set the color of your Inkyphat

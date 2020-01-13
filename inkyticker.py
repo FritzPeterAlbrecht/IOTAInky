@@ -62,14 +62,20 @@ class Inkyticker:
         if day <= 0.0:
             inkyphat.text((7, 42), day, inkyphat.RED, font)
 
-        # Add the ROI text
+        # Add the ROI as FIAT
         if self.config.show_roi == True:
             font = ImageFont.truetype(self.font, 34)
-            roi = self.price * self.config.coin_amount
+            roi = self.price * self.coin_amount
             roistr = str("%.2f" % roi)
             inkyphat.text((4, 75), roistr, inkyphat.WHITE, font)
 
+        # Add the ROI as percentage
         else:
-            pass
+
+            actual_value = self.price * self.coin_amount
+            percentage = (actual_value / self.coin_invest * 100) - 100
+            font = ImageFont.truetype(self.font, 34)
+            roistr = str("%.2f" % percentage)
+            inkyphat.text((4, 75), roistr, inkyphat.WHITE, font)
 
         inkyphat.show()

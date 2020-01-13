@@ -23,7 +23,7 @@ class Configuration:
             # Amount of tokens
             self.coin_amount = c["CoinAmount"]
             # Show ROI Label
-            self.show_roi = c["ShowROI"]
+            self.show_roi = c["ShowFiatROI"]
             # Background Image
             self.background = c["BackgroundImage"]
             # Font Path

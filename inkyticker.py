@@ -85,7 +85,7 @@ class Inkyticker:
         # basic settings of the inkyphat
         inkyphat.set_colour(self.config.inky_color)
         inkyphat.set_border(self.config.inky_border_color)
-        inkyphat.set_rotation(180)
+        inkyphat.set_rotation(self.config.inky_rotate)
         img = Image.open(self.config.portrait)
         inkyphat.set_image(img)
 
@@ -93,5 +93,13 @@ class Inkyticker:
         font = ImageFont.truetype(self.font, 26)
         price = str("%.3f" % self.price)
         inkyphat.text((4, 5), price, inkyphat.WHITE, font)
+
+        # Add the day change text
+        font = ImageFont.truetype(self.font, 22)
+        day = "%.2f" % self.day
+        if day >= 0.0:
+            inkyphat.text((7, 42), "24h:" + str(day), inkyphat.WHITE, font)
+        if day <= 0.0:
+            inkyphat.text((7, 42), "24h:" + str(day), inkyphat.RED, font)
 
         inkyphat.show()

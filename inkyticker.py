@@ -135,7 +135,7 @@ class Inkyticker:
         # Add ROI Percentage
         actual_value = self.price * self.coin_amount
         percentage = (actual_value / self.coin_invest * 100) - 100
-        font = ImageFont.truetype(self.font, 32)
+        font = ImageFont.truetype(self.font, 33)
         roistr = str("%.2f" % percentage + '%')
         inkyphat.text((54, 64), roistr, inkyphat.WHITE, font)
 

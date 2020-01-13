@@ -57,9 +57,9 @@ class Inkyticker:
         # Add the day change text
         font = ImageFont.truetype(self.font, 22)
         day = "%.2f" % self.day
-        if day >= 0.0:
+        if day > 0.0:
             inkyphat.text((7, 42), str(day), inkyphat.BLACK, font)
-        if day <= 0.0:
+        if day < 0.0:
             inkyphat.text((7, 42), str(day), inkyphat.RED, font)
 
         # Add the ROI as FIAT
@@ -98,22 +98,22 @@ class Inkyticker:
         # Add the price text
         font = ImageFont.truetype(self.font, 46)
         price = str("%.3f" % self.price)
-        inkyphat.text((65, 25), price, inkyphat.WHITE, font)
+        inkyphat.text((64, 25), price, inkyphat.WHITE, font)
 
         # Add the day change text
         font = ImageFont.truetype(self.font, 22)
         day = "%.2f" % self.day
-        if day >= 0.0:
+        if day > 0.0:
             inkyphat.text((66, 62), str("24h: " + str(day) + "%"), inkyphat.WHITE, font)
-        if day <= 0.0:
+        if day < 0.0:
             inkyphat.text((66, 62), str("24h: " + str(day) + "%"), inkyphat.RED, font)
 
         # Add the week change text
         font = ImageFont.truetype(self.font, 22)
         week = "%.2f" % self.week
-        if week >= 0.0:
-            inkyphat.text((66, 84), str("7d: " + str(week) + "%"), inkyphat.WHITE, font)
-        if week <= 0.0:
-            inkyphat.text((66, 84), str("7d: " + str(week) + "%"), inkyphat.RED, font)
+        if week > 0.0:
+            inkyphat.text((67, 82), str("7d: " + str(week) + "%"), inkyphat.WHITE, font)
+        if week < 0.0:
+            inkyphat.text((67, 82), str("7d: " + str(week) + "%"), inkyphat.RED, font)
 
         inkyphat.show()

@@ -22,12 +22,10 @@ class Configuration:
             self.coin_invest = c["CoinInvest"]
             # Amount of tokens
             self.coin_amount = c["CoinAmount"]
-            # Simple Mode on/off
-            self.simple_mode = c["SimpleMode"]
-            # Simple Personal Mode on/off
-            self.simple_personal = c["SimplePersonal"]
-            # Show ROI Label
-            self.show_roi = c["ShowFiatROI"]
+            # Mode switch
+            self.mode = c["Mode"]
+            # Show ROI Label - only for mode 1
+            self.show_roi = c["Mode1FiatROI"]
             # Background Image
             self.background = c["BackgroundImage"]
             # Background Portrait Mode

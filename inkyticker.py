@@ -44,8 +44,8 @@ class Inkyticker:
 
         self.roi = self.price * self.coin_amount
 
-    # Function for the normal mode
-    def normal(self):
+    # Set up mode 1
+    def mode1(self):
 
         # background image
         img = Image.open(self.config.background)
@@ -83,8 +83,8 @@ class Inkyticker:
 
         inkyphat.show()
 
-    # Function for the simple mode
-    def simple(self):
+    # Set up mode 2
+    def mode2(self):
 
         # background image
         img = Image.open(self.config.back_simple)
@@ -117,7 +117,8 @@ class Inkyticker:
 
         inkyphat.show()
 
-    def simple_personal(self):
+    # Set up mode3
+    def mode3(self):
 
         # background image
         img = Image.open(self.config.back_simple)

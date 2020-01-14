@@ -13,9 +13,9 @@ if __name__ == "__main__":
     # run the programm
     sleep(10)
     ticker.data()
-    if config.simple_mode == True:
-        ticker.simple()
-    elif config.simple_personal == True:
-        ticker.simple_personal()
+    if config.mode == 3:
+        ticker.mode3()
+    elif config.mode == 2:
+        ticker.mode2()
     else:
-        ticker.normal()
+        ticker.mode1()

@@ -27,6 +27,16 @@ Also we need the requests package:
 $ sudo pip3 install requests
 ```
 
+#### How to get everything started?
+
+Take your Raspberry Zero, plug in the Inkyphat e-Ink Display and clone this repository. You may adjust the paths in the config and program files.
+
+Open the main.py in any editor and look up for this line:
+
+```
+config = Configuration("/this/is/yourpath/to/config.json")
+```
+
 #### Configuration file for the settings
 
 | Setting | Function |
@@ -46,14 +56,3 @@ $ sudo pip3 install requests
 | InkyRotate | Rotation of your Inkyphat |
 
 ![IOTAInky Mode Examples](http://www.frankeberhard.com/upload/IOTAInkyModes.jpeg)
-
-
-#### How to get everything started
-
-Take your Raspberry Zero, plug in the Inkyphat e-Ink Display and clone this repository. You may adjust the paths in the config and program files.
-
-Open the main.py in any editor and look up for this line:
-
-```
-config = Configuration("/this/is/yourpath/to/config.json")
-```

@@ -138,6 +138,9 @@ class Inkyticker:
         percentage = (actual_value / self.coin_invest * 100) - 100
         font = ImageFont.truetype(self.font, 32)
         roistr = str("%.2f" % percentage + '%')
-        inkyphat.text((44, 67), roistr, inkyphat.WHITE, font)
+        if percentage > 0.0:
+            inkyphat.text((44, 67), roistr, inkyphat.WHITE, font)
+        else:
+            inkyphat.text((44, 67), roistr, inkyphat.RED, font)
 
         inkyphat.show()

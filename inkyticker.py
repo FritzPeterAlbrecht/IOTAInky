@@ -126,18 +126,18 @@ class Inkyticker:
 
         # Add ranking text
         font = ImageFont.truetype(self.font, 22)
-        inkyphat.text((55, 5), "#" + self.rank, inkyphat.WHITE, font)
+        inkyphat.text((45, 5), "#" + self.rank, inkyphat.WHITE, font)
 
         # Add the price text
         font = ImageFont.truetype(self.font, 48)
         price = str("%.3f" % self.price)
-        inkyphat.text((54, 25), price, inkyphat.WHITE, font)
+        inkyphat.text((44, 25), price, inkyphat.WHITE, font)
 
         # Add ROI Percentage
         actual_value = self.price * self.coin_amount
         percentage = (actual_value / self.coin_invest * 100) - 100
         font = ImageFont.truetype(self.font, 32)
         roistr = str("%.2f" % percentage + '%')
-        inkyphat.text((54, 67), roistr, inkyphat.WHITE, font)
+        inkyphat.text((44, 67), roistr, inkyphat.WHITE, font)
 
         inkyphat.show()
